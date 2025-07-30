@@ -1,0 +1,7 @@
+kafka:
+  brokers: "localhost:9092"
+  group_id: "complaint-group"
+  topic: "complaint-topic"
+  schema_registry_url: "http://localhost:8081"
+mysql:
+  dsn: "user:pass@tcp(localhost:3306)/yourdb?parseTime=true&charset=utf8mb4"
