@@ -19,11 +19,11 @@ func ConnectDB() {
 	// port := "3306"
 	// dbname := "customer_db"
 
-	user := os.Getenv("MYSQL_USER")
-	password := os.Getenv("MYSQL_PASSWORD")
-	host := os.Getenv("MYSQL_HOST")
-	port := os.Getenv("MYSQL_PORT")
-	dbname := os.Getenv("MYSQL_DATABASE")
+	user := os.Getenv("MYSQLUSER")
+	password := os.Getenv("MYSQLPASSWORD")
+	host := os.Getenv("MYSQLHOST")
+	port := os.Getenv("MYSQLPORT")
+	dbname := os.Getenv("MYSQLDATABASE")
 
 	fmt.Println("MYSQL_USER =", user)
 	fmt.Println("MYSQL_PASSWORD =", password)
