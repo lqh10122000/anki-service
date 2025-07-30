@@ -1,18 +1,16 @@
-# Dockerfile
-FROM golang:1.21-alpine
+FROM golang:1.24.4-alpine
 
-# Set working directory
 WORKDIR /app
 
-# Copy go.mod and go.sum
+# Install git (required by some go modules)
+RUN apk update && apk add --no-cache git
+
 COPY go.mod go.sum ./
+ENV GOPROXY=direct
 RUN go mod download
 
-# Copy the rest of the source code
 COPY . .
 
-# Build the Go app
 RUN go build -o main .
 
-# Command to run the executable
 CMD ["./main"]
